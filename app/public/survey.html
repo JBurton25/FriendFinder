@@ -130,15 +130,11 @@
                                                         <option value="5">5 (Strongly Disagree)</option>
                                                       </select>
                                                       </div>
-            
-            
-            
-            
               </div>
             </form>
             
         <div>
-          <button type="button" class="btn btn-primary btn-lg btn-block mb-4">Submit</button>
+          <button type="button" class="btn btn-primary btn-lg btn-block mb-4" id="submitbtn">Submit</button>
         </div>
         <footer class="footer">
           <div class="container">
@@ -172,7 +168,7 @@
       </div>
     </div>
     <script type="text/javascript">
-            $(".btn-block").on("click", function(event){
+            $("#submitbtn").on("click", function(event){
               event.preventDefault();
               
               function validateSurvey() {
@@ -182,32 +178,30 @@
                     validated = false
                   }
                 });              
-              $(".dropdown-menu").each(function() {
-                if($(this).val() === "") {
-                  validated = false;
-                }
-              });
               return validated;
             }
 
             if (validateSurvey()) {
               var newFriend = {
-                  name: $("#name").val().trim(),
-                  photo: $("#photolink").val().trim(),
+                  name: $("#name").val(),
+                  photo: $("#photolink").val(),
                   values: [
-                    $("#q1").val().trim(),
-                    $("#q2").val().trim(),
-                    $("#q3").val().trim(),
-                    $("#q4").val().trim(),
-                    $("#q5").val().trim(),
-                    $("#q6").val().trim(),
-                    $("#q7").val().trim(),
-                    $("#q8").val().trim(),
-                    $("#q9").val().trim(),
-                    $("#q10").val().trim(),
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
                   ]
                 };
-              $.post("api/friends", newFriend, function(data) {
+
+                var currentURL = window.location.origin;
+
+              $.post(currentURL + "/api/friends", newFriend, function(data) {
                 $("#bestFriend").text(data.name);
                 $("#bestImg").attr("src", data.photo);
                 $("#results").modal("toggle");
