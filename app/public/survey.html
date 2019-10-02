@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -27,119 +28,17 @@
             <label for="photoLink">Link to Photo Image (Required)</label>
             <input type="photo" class="form-control" id="photoLink" placeholder="www.google.com">
           </div>
+          <div id="questions"></div>
+          <div>
+            <button type="button" class="btn btn-primary btn-lg btn-block mb-4" id="submitbtn">Submit</button>
+          </div>
         </form>
-        <form>
-          <div class="questions">
-            <div class="form-group">
-              <label for="question 1"> Question 1: In public settings, you're happy and talkative.</label>
-              <select class="form-control" id="q1">
-                <option value="1">1 (Strongly Agree)</option>
-                <option value="2">2 (Agree)</option>
-                <option value="3">3 (Neither Agree or Disagree)</option>
-                <option value="4">4 (Disagree)</option>
-                <option value="5">5 (Strongly Disagree)</option>
-              </select>
-            </div>
-                      
-            <div class="form-group">
-                      <label for="Question 2">Question 2: In private, you're laid back.</label>
-                      <select class="form-control" id="q2">
-                        <option value="1">1 (Strongly Agree)</option>
-                        <option value="2">2 (Agree)</option>
-                        <option value="3">3 (Neither Agree or Disagree)</option>
-                        <option value="4">4 (Disagree)</option>
-                        <option value="5">5 (Strongly Disagree)</option>
-                      </select>
-                      </div>
-                      <div class="form-group">
-                          <label for="Question 3">Question 3: Your ideal gathering with friends is dinner and movie.</label>
-                          <select class="form-control" id="q3">
-                            <option value="1">1 (Strongly Agree)</option>
-                            <option value="2">2 (Agree)</option>
-                            <option value="3">3 (Neither Agree or Disagree)</option>
-                            <option value="4">4 (Disagree)</option>
-                            <option value="5">5 (Strongly Disagree)</option>
-                          </select>
-                          </div>
-                          <div class="form-group">
-                              <label for="Question 4">Question 4: Your ideal vacation is backpacking through Europe.</label>
-                              <select class="form-control" id="q4">
-                                <option value="1">1 (Strongly Agree)</option>
-                                <option value="2">2 (Agree)</option>
-                                <option value="3">3 (Neither Agree or Disagree)</option>
-                                <option value="4">4 (Disagree)</option>
-                                <option value="5">5 (Strongly Disagree)</option>
-                              </select>
-                              </div>
-                              <div class="form-group">
-                                  <label for="Question 5">Question 5: You rarely feel stressed.</label>
-                                  <select class="form-control" id="q5">
-                                    <option value="1">1 (Strongly Agree)</option>
-                                    <option value="2">2 (Agree)</option>
-                                    <option value="3">3 (Neither Agree or Disagree)</option>
-                                    <option value="4">4 (Disagree)</option>
-                                    <option value="5">5 (Strongly Disagree)</option>
-                                  </select>
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="Question 6">Question 6: You procrastinate projects, waiting until the last minute to begin.</label>
-                                      <select class="form-control" id="q6">
-                                        <option value="1">1 (Strongly Agree)</option>
-                                        <option value="2">2 (Agree)</option>
-                                        <option value="3">3 (Neither Agree or Disagree)</option>
-                                        <option value="4">4 (Disagree)</option>
-                                        <option value="5">5 (Strongly Disagree)</option>
-                                      </select>
-                                      </div>
-                                      <div class="form-group">
-                                          <label for="Question 7">Question 7: You love pets.</label>
-                                          <select class="form-control" id="q7">
-                                            <option value="1">1 (Strongly Agree)</option>
-                                            <option value="2">2 (Agree)</option>
-                                            <option value="3">3 (Neither Agree or Disagree)</option>
-                                            <option value="4">4 (Disagree)</option>
-                                            <option value="5">5 (Strongly Disagree)</option>
-                                          </select>
-                                          </div>
-                                          <div class="form-group">
-                                              <label for="Question 8">Question 8: Friends would call you the life of the party.</label>
-                                              <select class="form-control" id="q8">
-                                                <option value="1">1 (Strongly Agree)</option>
-                                                <option value="2">2 (Agree)</option>
-                                                <option value="3">3 (Neither Agree or Disagree)</option>
-                                                <option value="4">4 (Disagree)</option>
-                                                <option value="5">5 (Strongly Disagree)</option>
-                                              </select>
-                                              </div>
-                                              <div class="form-group">
-                                                  <label for="Question 9">Question 9: You exercise regularly.</label>
-                                                  <select class="form-control" id="q9">
-                                                    <option value="1">1 (Strongly Agree)</option>
-                                                    <option value="2">2 (Agree)</option>
-                                                    <option value="3">3 (Neither Agree or Disagree)</option>
-                                                    <option value="4">4 (Disagree)</option>
-                                                    <option value="5">5 (Strongly Disagree)</option>
-                                                  </select>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <label for="Question 10">Question 10: You consider yourself well cultured.</label>
-                                                      <select class="form-control" id="q10">
-                                                        <option value="1">1 (Strongly Agree)</option>
-                                                        <option value="2">2 (Agree)</option>
-                                                        <option value="3">3 (Neither Agree or Disagree)</option>
-                                                        <option value="4">4 (Disagree)</option>
-                                                        <option value="5">5 (Strongly Disagree)</option>
-                                                      </select>
-                                                      </div>
-              </div>
-            </form>
-            
-        <div>
-          <button type="button" class="btn btn-primary btn-lg btn-block mb-4" id="submitbtn">Submit</button>
-        </div>
+      </div>
+          
+
         <footer class="footer">
           <div class="container">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/JBurton25/friendfinder">GitHub
+            <p><a href="../data/friends.js">API Friends List</a> | <a href="https://github.com/JBurton25/friendfinder">GitHub
                 Repo</a></p>
           </div>
         </footer>
@@ -148,76 +47,35 @@
     </div>
     </div>
     </div>
-
-    <div class="modal" id ="results" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
+    <!--Error Modal -->
+    <div id="errorModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">BEST FRIENDS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            <h4 class="modal-title">Please fill out all fields before submitting!</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Match Result Modal-->
+    <div class="modal" id ="matchmodal"role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
+              <h4 class="modal-title">Here is your closest match!</h4>
             </button>
           </div>
-          <div class="modal-body">
-            <p id="bestfriend"></p>
-            <img id="bestImg" scr="" alt="best friend">
-          </div>
+          <div class="modal-body" id="modalContent"></div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
-    </div>
-    <script type="text/javascript">
-            $("#submitbtn").on("click", function(event){
-              event.preventDefault();
-              
-              function validateSurvey() {
-                var validated = true;
-                $(".form-control").each(function() {
-                  if($(this).val() === "") {
-                    validated = false
-                  }
-                });              
-              return validated;
-            }
-
-            if (validateSurvey()) {
-              var newFriend = {
-                  name: $("#name").val(),
-                  photo: $("#photolink").val(),
-                  values: [
-                    $("#q1").val(),
-                    $("#q2").val(),
-                    $("#q3").val(),
-                    $("#q4").val(),
-                    $("#q5").val(),
-                    $("#q6").val(),
-                    $("#q7").val(),
-                    $("#q8").val(),
-                    $("#q9").val(),
-                    $("#q10").val()
-                  ]
-                };
-
-                var currentURL = window.location.origin;
-
-              $.post(currentURL + "/api/friends", newFriend, function(data) {
-                $("#bestFriend").text(data.name);
-                $("#bestImg").attr("src", data.photo);
-                $("#results").modal("toggle");
-
-              });
-            } else {
-              alert("Please answer all questions!");
-            }
-
-          });
-
-        
-    
-    
-    </script>
+    </div>    
     
 </body>
 </html>
