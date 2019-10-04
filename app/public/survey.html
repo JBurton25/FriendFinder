@@ -1,81 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Friend Finder - survey</title>
+    <!-- My styles -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap & JQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="javascript/survey.js"></script>
-    <title>Friend Finder</title>
-</head>
-<body>
-    <div class="container">
-    <div class="row">
-      <div class="col-lg-10 col-lg-offset-2">
-        <h1>Survey Questions</h1>
+
+  </head>
+  <body>
+    <div class="col-xs-12">
+      <div class="row">
+        <h1>Survey questions</h1>
+        <hr>
+        <h2>About you</h2>
         <form>
           <div class="form-group">
-            <h2>About You</h2>
             <label for="Name">Name (Required)</label>
-            <input type="name" class="form-control" id="name" aria-describedby="name" placeholder="John Smith">
+            <input type="text" class="form-control" id="name">
           </div>
           <div class="form-group">
             <label for="photoLink">Link to Photo Image (Required)</label>
-            <input type="photo" class="form-control" id="photoLink" placeholder="www.google.com">
+            <input type="url" class="form-control" id="photoLink">
           </div>
-          <div id="questions"></div>
-          <div>
-            <button type="button" class="btn btn-primary btn-lg btn-block mb-4" id="submitbtn">Submit</button>
-          </div>
-        </form>
-      </div>
-          
 
-        <footer class="footer">
-          <div class="container">
-            <p><a href="../data/friends.js">API Friends List</a> | <a href="https://github.com/JBurton25/friendfinder">GitHub
-                Repo</a></p>
-          </div>
-        </footer>
-    
+          <div id="questions"></div>
+
+          <button class="btn btn-primary btn-block" id="submitForm" type="submit">Submit</button>
+        </form>  
+
+        <footer>
+          <p><a href="../data/friends.js">API Friends List</a> | <a href="https://github.com/johnTjohansen/friendfinder">GitHub Repo</a></p>
+        </footer>  
+
       </div>
-    </div>
-    </div>
-    </div>
-    <!--Error Modal -->
+    </div>  
+    <!-- Error Modal -->
     <div id="errorModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
             <h4 class="modal-title">Please fill out all fields before submitting!</h4>
           </div>
         </div>
       </div>
     </div>
-
-    <!--Match Result Modal-->
-    <div class="modal" id ="matchmodal"role="dialog">
-      <div class="modal-dialog">
+  </div>
+    <!-- Modal for match result presentation -->
+    <div id="matchModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-              <h4 class="modal-title">Here is your closest match!</h4>
-            </button>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Here is your closest match!</h4>
           </div>
           <div class="modal-body" id="modalContent"></div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-      </div>
-    </div>    
-    
-</body>
+      </div> 
+    </div>
+
+  </body>
+
 </html>
