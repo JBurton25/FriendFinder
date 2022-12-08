@@ -20,7 +20,7 @@
   "homepage": "https://github.com/JBurton25/FriendFinder#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "path": "^0.12.7",
     "require": "^2.4.20"
   }
